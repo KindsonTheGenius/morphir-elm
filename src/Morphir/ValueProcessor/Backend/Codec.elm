@@ -5,4 +5,5 @@ import Morphir.ValueProcessor.Backend exposing (Options)
 
 
 decodeOptions =
-    Decode.succeed Options
+    Decode.map Options
+        (Decode.field "valueName" Decode.string)

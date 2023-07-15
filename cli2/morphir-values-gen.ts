@@ -10,6 +10,7 @@ program
     .option('-i, --input <path>', 'Source location where the Morphir IR will be loaded from.', 'morphir-ir.json')
     .option('-o, --output <path>', 'Target location where the generated code will be saved.', './dist')
     .option('-t, --target <type>', 'What to Generate.', 'ValuesData')
+    .option('-v, --valueName <string>', 'The value name to generate', '')
     .parse(process.argv)
 
 cli.gen(program.opts().input, path.resolve(program.opts().output), program.opts())
